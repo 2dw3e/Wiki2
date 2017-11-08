@@ -1,0 +1,185 @@
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+    div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.imgindex{
+    border: 5px solid #ccc;
+    float: left;
+    margin: 15px;
+    -webkit-transition: margin 0.5s ease-out;
+    -moz-transition: margin 0.5s ease-out;
+    -o-transition: margin 0.5s ease-out;
+}
+ 
+.imgindex:hover {
+    margin-top: 2px;
+}
+
+.leermas {
+  text-align: right;
+  font-size:100%;
+}
+
+.margen {
+  margin-left: 2%;
+}
+
+.imgprog{
+    border: 5px solid #ccc;
+    float: left;
+    margin: 15px;
+}
+
+
+/*Quitar enlace*/
+.noenlace:hover{
+  text-decoration: none;
+  color:  #1F7AB3;
+}
+
+.carousel {
+  margin-left: 20%;
+  margin-right: 25%;
+}
+
+.texto {
+  color: grey;
+  width: 20%;
+}
+
+.lista {
+  list-style: none;
+}
+
+/*Colores para el texto*/
+.rojo {
+  color: red;
+}
+
+.azul {
+  color: #1F7AB3;
+}
+
+/*Colores fondo*/
+.blanco {
+  background-color: #FFFFFF;
+}
+
+.margen {
+  margin-left: 2%;
+}
+
+.video {
+  width: 90%;
+  height: 90%;
+}
+
+.header {
+  background-image: url("../imagenes/fondo.png");
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.footer {
+  font-family: "A Perfect Place";
+  font-size: 3em;
+  text-align: right;
+}
+
+.headerindex {
+
+background: rgba(245,245,245,1);
+background: -moz-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(105,105,105,1) 0%, rgba(171,171,171,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(245,245,245,1)), color-stop(0%, rgba(105,105,105,1)), color-stop(100%, rgba(171,171,171,1)));
+background: -webkit-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(105,105,105,1) 0%, rgba(171,171,171,1) 100%);
+background: -o-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(105,105,105,1) 0%, rgba(171,171,171,1) 100%);
+background: -ms-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(105,105,105,1) 0%, rgba(171,171,171,1) 100%);
+background: linear-gradient(to bottom, rgba(245,245,245,1) 0%, rgba(105,105,105,1) 0%, rgba(171,171,171,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ababab', GradientType=0 );
+}
+
+.h1index {
+  font-family: "A Perfect Place";
+  font-size: 6em;
+}
+
+
+.bodyindex {
+  background-image: url("../imagenes/home-bg.jpg");
+}
+
+.footerindex {
+  font-family: "A Perfect Place";
+  font-size: 3em;
+  text-align: right;
+  margin-right: 2%;
+  margin-top: 4.3%;
+}
