@@ -1,97 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>OwnCloud</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/estilos.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
-
-    div.gallery {
-    border: 1px solid #ccc;
-}
-
-div.gallery:hover {
-    border: 1px solid #777;
-}
-
-div.gallery img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px){
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px){
-    .responsive {
-        width: 100%;
-    }
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-
-</style>
 </head>
-<body>
+<body class="bodyindex">
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -101,63 +20,176 @@ div.desc {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Wiki</a>
+      <a class="navbar-brand" href="#">Wiki2</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="#">Sobre nosotros</a></li>
-        <li><a href="#">proyecto</a></li>
-        <li><a href="#">contacto</a></li>
+        <li><a href="index.html">Hasiera</a></li>
+        <li><a href="prestashop.html">Prestashop</a></li>
+        <li><a href="wordpress.html">Wordpress</a></li>
+        <li class="active"><a href="owncloud.html">Owncloud</a></li>
+        <li><a href="mysql.html">MySQL</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
        
     </div>
   </div>
 </nav>
-  
-    <div class="col-sm-12 text-left"> 
-      <div class="page-header text-center">
+    <div class="col-sm-12 text-left blanco"> 
+      <header class="header">
+      <div class=" text-center">
        <img src="imagenes/Wikitext.png" width="250" height="250" alt="..." class="img-rounded">
-         <h1 class="text-center">OwnCloud<small><br>Información sobre instalación</small></h1>
+         <h1 class="text-center">PrestaShop<small><br>Información sobre instalación</small></h1>
       </div>
       
       <div class="col-sm-12 text-center justified">
-  <a href="#primero" class="btn btn-info" role="button">Instalación</a>
-  <a href="#segundo" class="btn btn-info" role="button">Información</a>
-  <a href="#tercero" class="btn btn-info" role="button">Problemas</a>
+        <a href="#primero" class="btn btn-info" role="button">Instalación</a>
+        <a href="#segundo" class="btn btn-info" role="button">Información</a>
+        <a href="#tercero" class="btn btn-info" role="button">Problemas</a>
      </div><br><br>
-   
-    
-
-
+</header>
  <div class="col-sm-12">
-      <div class="well">
-	  <div id="bodyContent" class="mw-body-content">
+  <div class="well">
+    <div id="bodyContent" class="mw-body-content">
+      </div>
+        <div class="row">
+          <div align="none">
+            <img src="imagenes/owncloud.png" align="right" width="150" height="150" class="img-responsive imgprog">
+          </div>
+          <p class="text-muted">
+            <a class="noenlace" name="primero">
+              <h1>Instalación</h1><br>
+            </a>
+            <p>
+
+              - Para instalar OwnCloud paso a paso lo primero que tenemos que hacer es entrar al servidor y ejecutar los siguientes comandos:
+            <ul class="lista">
+              <li>sudo apt-get upgrade</li>
+              <li>sudo apt-get update</li><br><br>
+              - Instalaremos un shell para facilitar nustro trabajo, por ejemplo: fish, una buena herramienta
+              <li>sudo apt-get install fish</li>
+              <li>chsh -s /usr/bin/fish</li>
+              <li>fish  <a class="azul">(para empezar a usarla ya)</a></li><br>
+
+              - Ahora necesitamos instalar un servidor LAMP, hay que introducir estos comandos:
+              <li>sudo apt-get install lamp-server^  (no os olvidéis del <b class="rojo">^</b> final)</li>
+              <li>sudo mysql_secure_installation (nos preguntará unas cosas)</li><br>
+              <li>change root password? pon <b class="rojo">n</b>.</li>
+              <li>remove anonymous users? pon <b class="rojo">y</b>.</li>
+              <li>disallow remote root logins? pon <b class="rojo">y</b>.</li>
+              <li>remove test database and access to it? pon <b class="rojo">y</b>.</li>
+              <li>reload privilege tables? pon <b class="rojo">y</b>.</li>
+            </ul>
+            </p><br>
+            <ul class="lista">
+                - Instala las siguientes dependencias:
+              <li>sudo apt-get install php5-gd php-xml-parser php5-intl smbclient curl libcurl3 php5-curl</li>
+             <br>
+              - Ahora necesitamos habilitar los módulos de Apache2 mod_rewrite y mod_headers para que ownCloud funcione con normalidad.
+              <br>
+              <li>sudo a2enmod rewrite</li>
+              <li>sudo a2enmod headers</li>
+              <br>
+              - Por último editaremos la configuración de Apache2 para que las normas rewrite de ownCloud funcionen:              
+              <li>sudo nano /etc/apache2/apache2.conf</li>
+              <br>
+              - Una vez allí debes bajar buscando una sección llamada <b class="azul">directory /var/www/</b> en la que sustituiremos AllowOverride None por AllowOverride All:
+              <li>sudo service apache2 restart</li>
+               <br> 
+
+              - Hay que bajar la última versión, extraerla, moverla a la carpeta que le corresponde y darle los permisos adecuados.
+              
+            <li>wget <a class="noenlace">http://download.owncloud.org/community/owncloud-latest.tar.bz2</a></li>
+            <li>tar -xjf owncloud-latest.tar.bz2</li>
+            <li>sudo mv owncloud /var/www/html/</li>
+            <li>cd /var/www/html/</li>
+            <li>sudo chown -R www-data:www-data owncloud</li>     
+            - Ahora vamos a crear la base de datos de ownCloud. Primero entramos a MySQL:
+            <li>mysql -u root -p</li><br>
+            - Creamos la base de datos:
+              
+            <p class="texto lista">> CREATE DATABASE owncloud;</p>
+                 
+              <br>
+                    
+              - Asignamos la base de datos al usuario owncloud con la contraseña (pass) que queráis:
+              
+              <p class="texto lista">> GRANT ALL ON owncloud.* TO 'owncloud'@'localhost' IDENTIFIED BY 'pass';</p class>
+              
+              
+                <p>- Ahora podemos salir escribiendo quit.</p><br>
+
+            <p>Listo, escribimos nuestra <a class="noenlace">IP/owncloud/</a> en nuestro navegador y ya podemos usarlos</p>
+
+            </ul>  
+              <ul>
+            </p>
+            <br>
+            <video class="video" src="video/own.mp4" autoplay controls muted></video> 
+            <br>
+            <br>
+              <a class="noenlace" name="segundo">
+                <h1>Informacion</h1>
+              </a>
+                <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="imagenes/O1.png" alt="First slide">
+        </div>
+        <div class="item">
+          <img class="second-slide" src="imagenes/O2.png" alt="Second slide">
+        </div>
+        <div class="item">
+          <img class="third-slide" src="imagenes/O3.png" alt="Third slide">
+        </div>
+        <div class="item">
+          <img class="fourth-slide" src="imagenes/O4.png" alt="Fourth slide">
+        </div>   
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+              <br>
+              <br>
+                <a class="noenlace" name="tercero">
+                  <h1>Problemas</h1>
+                </a>
+                <div class="margen">
+                  Hubo varios problemas, el más importante fue la actualización de Ubuntu.
+                  Al principio nos daba errores la versión de PHP (5.0), cambiamos a la 7.0.<br>
+                  Luego actualizamos Ubuntu.
+                  Borró todo el owncloud y tuvimos que hacerlo de nuevo, con otra versión de PHP.
+                  Cambiamos a la 7.1 y creamos por segunda vez la nube, ahora sin fallos.
+                </div>
+            </p>          
       </div>
       <div class="row">
-            <div align="none"><img src="imagenes/owncloud.png" align="right" width="150" height="150" alt="..." class="img-responsive"></div><h3></h3><p class="text-muted"><a name="primero"><H1>Instalación</H1></a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut <br><br><a class="go-top" href="#">Subir</a><a name="segundo"><H1>Informacion</H1></a> enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa quinostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi occaecat cupidatat non proident, sunt in culpa quinostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exoccaecat cupidatat non proident, sunt in culpa quinostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ip<br><br><a class="go-top" href="#">Subir</a><a name="tercero"><H1>Problemas</H1></a> sum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea occaecat cupidatat non proident, sunt in culpa quinostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip excommodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis  officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><a class="go-top" href="#">Subir</a>
-        
-      </div>
-      <div class="row">
-        
         </div>
       </div>
     </div>
   </div>
 </div>
-<div style="padding:6px;">
-  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
-  <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
 
-
-
-
-
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
+<div>
+<footer class="footer">
+  <p>Created & Designed by Eric & Andrea</p>
 </footer>
-
+</div>
 </body>
 </html>
+ 

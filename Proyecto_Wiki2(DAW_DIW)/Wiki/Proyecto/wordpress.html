@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>WordPress</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -48,7 +48,7 @@
 
       <div class="col-sm-12 text-center justified">
         <a href="#primero" class="btn btn-info" role="button">Instalación</a>
-        <a href="#segundo" class="btn btn-info" role="button">Información</a>
+        <a href="#segundo" class="btn btn-info" role="button">Capturas</a>
         <a href="#tercero" class="btn btn-info" role="button">Problemas</a>
      </div><br><br>
 </header>
@@ -58,7 +58,7 @@
       </div>
         <div class="row">
           <div align="none">
-            <img src="imagenes/prestashop.png" align="right" width="150" height="150" class="img-responsive imgprog">
+            <img src="imagenes/wordpress.png" align="right" width="150" height="150" class="img-responsive imgprog">
           </div>
           <p class="text-muted">
             <a class="noenlace" name="primero">
@@ -70,24 +70,31 @@
             <ul class="lista">
               <li>mysql -u root -p</li>
               <b><i>
-              <li>mysql > CREATE DATABASE prestashop;</li>
-              <li>mysql > GRANT ALL ON prestashop.* TO 'root'@'localhost' IDENTIFIED BY 'Admin123_';</li>
+              <li>mysql > CREATE DATABASE wordpress;</li>
+              <li>mysql > GRANT ALL ON wordpress.* TO 'root'@'localhost' IDENTIFIED BY 'Admin123_';</li>
               <li>mysql > FLUSH PRIVILEGES;</li>
               <li>mysql > EXIT;</li>
               </i></b>
               <br>
               <li>sudo apt-get update</li>
-              <li>sudo apt-get install php5 libapache2-mod-php5 php5-mysql php5-curl php5-gd php5-intl php-pear   php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode  php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y</li>
+              <li>sudo apt-get install php-curl php-gd php-mbstring php-mcrypt php-xml php-xmlrpc</li>
+              <li>sudo systemctl restart apache2</li>
+              <li>sudo nano /etc/apache2/apache2.conf</li>
+                <ul class="texto lista">
+                    <li>&lt;Directory /var/www/html&gt;</li>
+                    <li>AllowOverride <b class="rojo">All</b></li>
+                    <li>&lt;/Directory&gt;</li>
+                </ul>
+              <li>sudo a2enmod rewrite</li>
               <li>sudo systemctl restart apache2</li>
               <li>cd /var/www/html</li>
-              <li>wget <a class="noenlace"><b>prestashop.com/download/prestashop 1.6.1.5.zip</b></a></li>
-              <li>sudo apt-get install unzip -y</li>
-              <li>sudo unzip prestashop_1.6.1.5.zip</li>
+              <li>wget <a class="noenlace"><b>https://wordpress.org/latest.tar.gz</b></a></li>
+              <li>tar xzvf latest.tar.gz</li>
               <li>sudo chown -R www-data:www-data.*</li>
               <li>nano /var/www/html/wp-config.php</li>
               <br>
                 <ul class="texto lista">
-                  <li>define('DB_NAME', '<b class="rojo">prestashop</b>');</li>
+                  <li>define('DB_NAME', '<b class="rojo">wordpress</b>');</li>
                   <li>/** MySQL database username */</li>
                   <li>define('DB_USER', '<b class="rojo">root</b>');</li>
                   <li>/** MySQL database password */</li>
@@ -95,26 +102,23 @@
                 </ul>
             </ul>      
             <p class="margen">
-              - Ahora vamos a instalar Prestashop a través del navegador web:
+              - Ahora vamos a instalar Wordpress a través del navegador web:
               <ul class="lista">
-                <li>Entramos en “<a href="http://10.9.53.109/prestashop"><b>http://10.9.53.109/prestashop</b></a>”</li>
-                <li>Buscamos el “<b class="rojo"><i>Español (Spanish)</i></b>”.
-              Y le damos a “<b class="azul"><i>Siguiente</i></b>”</li>
-                <li>Aceptamos los términos y condiciones arriba indicados y le damos a “<b class="azul"><i>Siguiente</i></b>”</li>
-                <li>Rellenamos con los datos necesarios y le damos a “<b class="azul"><i>Siguiente</i></b>”</li>
-                <li>Rellenamos con los datos de la base de datos que hemos creado antes y le damos a “<b class="azul"><i>Siguiente</i></b>”</li>
-                <li>Esperamos a que se realice la instalación</li>
-                <li>Si intentamos acceder nos dará error, asi que tendremos que volver al servidor y borrar la carpeta de "<b class="rojo"><i>install</i></b>" y renombrar la carpeta de "<b class="rojo"><i>admin</i></b>"</li>
-                <li></li>
-              <ul>
+                <li>Entramos en “<a href="http://10.9.53.109/wordpress"><b>http://10.9.53.109/wordpress</b></a>”</li>
+                <li>Le damos a “<b class="azul"><i>¡Vamos a ello!</i></b>”</li>
+                <li>Rellenamos con los datos necesarios y le damos a “<b class="azul"><i>Enviar</i></b>”</li>
+                <li>Ahora ponemos el título, el nombre de usuario de WordPress, una dirección de correo y una contraseña, y le damos a “<b class="azul"><i>Instalar WordPress</i></b>”</li>
+                <li>Y listo ya tenemos WordPress instalado. Le damos a “<b class="azul"><i>Acceder</i></b>”</li>
+                <li>Nos logueamos con el usuario y la contraseña que hemos puesto antes.</li>
+                <li>Nos aparecerá el panel de control desde el que podremos editar y personalizar a nuestro gusto el WordPress.</li>
             </p>
             <br>
-            <video class="video" src="video/install prest.mp4" autoplay controls muted></video> 
+            <video class="video" src="video/install word.mp4" autoplay controls muted></video> 
             <br>
             <br>
             <a class="go-top" href="#">Subir</a>
               <a class="noenlace" name="segundo">
-                <h1>Informacion</h1>
+                <h1>Capturas</h1>
               </a>
                 <!-- Carousel
     ================================================== -->
@@ -127,22 +131,22 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="imagenes/P1.png" alt="First slide">
+          <img class="first-slide" src="imagenes/W1.png" alt="First slide">
         </div>
         <div class="item">
-          <img class="second-slide" src="imagenes/P2.png" alt="Second slide">
+          <img class="second-slide" src="imagenes/W2.png" alt="Second slide">
         </div>
         <div class="item">
-          <img class="third-slide" src="imagenes/P3.png" alt="Third slide">
+          <img class="third-slide" src="imagenes/W3.png" alt="Third slide">
         </div>
         <div class="item">
-          <img class="fourth-slide" src="imagenes/P4.png" alt="Fourth slide">
+          <img class="fourth-slide" src="imagenes/W4.png" alt="Fourth slide">
         </div>
         <div class="item">
-          <img class="fifth-slide" src="imagenes/P5.png" alt="Fifth slide">
+          <img class="fifth-slide" src="imagenes/W5.png" alt="Fifth slide">
         </div>
         <div class="item">
-          <img class="sixth-slide" src="imagenes/P6.png" alt="Sixth slide">
+          <img class="sixth-slide" src="imagenes/W6.png" alt="Sixth slide">
         </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -162,7 +166,6 @@
                   <h1>Problemas</h1>
                 </a>
                 <h1>TÚ.</h1>
-            </p>
           <a class="go-top" href="#">Subir</a>
           
       </div>
